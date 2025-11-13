@@ -1,4 +1,4 @@
-package how2metodos.proyect1.code;
+package clases;
 public class class1LoginTry {
     
     String user;

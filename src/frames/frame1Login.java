@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package how2metodos.proyect1.code;
+package frames;
 
+import clases.class1LoginTry;
 import javax.swing.JOptionPane;
 
 
@@ -153,7 +154,7 @@ public class frame1Login extends javax.swing.JFrame {
             this.setVisible(false);
             
             //crear y hacer visible el frame 2
-            btnCrearCaja1 frame2 = new btnCrearCaja1();
+            Frame2Programa frame2 = new Frame2Programa();
             frame2.setVisible(true);
 
         } else{

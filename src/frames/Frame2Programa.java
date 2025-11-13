@@ -1,14 +1,16 @@
-package how2metodos.proyect1.code;
+package frames;
+import clases.class2Methods;
+import clases.contadorCodigoProducto;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-public class btnCrearCaja1 extends javax.swing.JFrame {
+public class Frame2Programa extends javax.swing.JFrame {
     
     //creacion del objeto del modelo de la tabla default, esto es para colocarle nombre a 
     //los campops de la tabla
     DefaultTableModel modeloTabla = new DefaultTableModel();
     
-    public btnCrearCaja1() {
+    public Frame2Programa() {
         initComponents();
         
         //colocacion de nombres de las columnas de la modeloTabla en un array
@@ -205,29 +207,40 @@ public class btnCrearCaja1 extends javax.swing.JFrame {
     private void crearCaja(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearCaja
         // TODO add your handling code here:
         //i take the variables from the Jframe
+        contadorCodigoProducto clase2;
+        clase2 = new contadorCodigoProducto();
+        
+        
+        int codigow = 0;
+        clase2.añadirCodigo();
+        
         String name = inputCrearNombre1.getText();
         int amount = Integer.parseInt(inputCrearCantidad1.getText());
         int price = Integer.parseInt(inputCrearPrecio1.getText());
-        int codigo = 0;
+//        int codigo = (createPerson.getCodigo());
         
-        //put the variables to the constructor
-        createPerson = new class2Methods();
-        createPerson.setName(name);
-        createPerson.setAmount(amount);
-        createPerson.setPrice(price);
+//        createPerson.añadirCodigo();
         
-        //confirmation of the creation of the box
-        if (createPerson.isCreated() == true){
-            JOptionPane.showMessageDialog(rootPane, "Caja creada satisfactoriamente");
-        }
-        else{
-            JOptionPane.showMessageDialog(rootPane, "Caja creada erroneamente, intente otra vez");
-        }
+        createPerson = new class2Methods(name, amount, price/*, codigo*/);
+//        //put the variables to the constructor
+//        createPerson.setName(name);
+//        createPerson.setAmount(amount);
+//        createPerson.setPrice(price);
+//        
+//        createPerson.setCodigo(codigo);
         
         //debbugging what was the variables in the object
         System.out.println("name: " + createPerson.getName());
         System.out.println("amount: " + createPerson.getAmount());
         System.out.println("price: " + createPerson.getPrice() + "$");
+//        System.out.println("codigo: " + codigo);
+
+        
+        
+        
+        
+        
+        //confirmation of the creation of the box
         
         
         
@@ -238,6 +251,7 @@ public class btnCrearCaja1 extends javax.swing.JFrame {
         String datosTabla[] =  new String[4];
         
         //se toman los datos desde el metodo "createPerson" con los getters
+        int codigo = 3;
         datosTabla[0] = String.valueOf(codigo);
         datosTabla[1] = (createPerson.getName());
         datosTabla[2] = String.valueOf(createPerson.getPrice());
@@ -262,21 +276,23 @@ public class btnCrearCaja1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(btnCrearCaja1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame2Programa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(btnCrearCaja1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame2Programa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(btnCrearCaja1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame2Programa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(btnCrearCaja1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frame2Programa.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new btnCrearCaja1().setVisible(true);
+                new Frame2Programa().setVisible(true);
             }
         });
     }
