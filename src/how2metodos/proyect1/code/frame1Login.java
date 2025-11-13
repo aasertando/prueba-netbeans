@@ -135,6 +135,7 @@ public class frame1Login extends javax.swing.JFrame {
 
         String hola = "hola";
         String prueba  = "algo";
+        String ayuad = "aasad";
         
         String user = inputUsuario.getText();
         String password = inputContrasena.getText();
