@@ -133,17 +133,9 @@ public class frame1Login extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
 
-        String hola = "hola";
-        String prueba  = "algo";
-        String ayuad = "aasad";
-        String ayuad2 = "aasad";
-        
         String user = inputUsuario.getText();
         String password = inputContrasena.getText();
-        
-        int num12 =12;
-        int num23 = 23;
-        String perro = "perro hpta";
+
         
         //se mandan  valores al constructor
         class1LoginTry clase = new class1LoginTry(user, password);
