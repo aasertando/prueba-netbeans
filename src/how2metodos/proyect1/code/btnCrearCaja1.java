@@ -86,7 +86,7 @@ public class btnCrearCaja1 extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(inputCrearPrecio1))))
                     .addGroup(bg1Layout.createSequentialGroup()
-                        .addGap(175, 175, 175)
+                        .addGap(199, 199, 199)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(94, Short.MAX_VALUE))
         );
@@ -105,9 +105,9 @@ public class btnCrearCaja1 extends javax.swing.JFrame {
                 .addGroup(bg1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCrearPrecio1)
                     .addComponent(inputCrearPrecio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
+                .addGap(48, 48, 48)
                 .addComponent(jButton1)
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
 
         tabbed1.addTab("CrearCaja", bg1);
@@ -240,8 +240,8 @@ public class btnCrearCaja1 extends javax.swing.JFrame {
         //se toman los datos desde el metodo "createPerson" con los getters
         datosTabla[0] = String.valueOf(codigo);
         datosTabla[1] = (createPerson.getName());
-        datosTabla[2] = String.valueOf(createPerson.getAmount());
-        datosTabla[3] = String.valueOf(createPerson.getPrice());
+        datosTabla[2] = String.valueOf(createPerson.getPrice());
+        datosTabla[3] = String.valueOf(createPerson.getAmount());
         
         //se coloca en la modeloTabla
         modeloTabla.addRow(datosTabla);
