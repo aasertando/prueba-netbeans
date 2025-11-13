@@ -144,8 +144,6 @@ public class frame1Login extends javax.swing.JFrame {
         boolean selection = clase.loginTry();
         System.out.println("login try was: " + selection);
         
-        int pepe = 4;
-        
         if (selection){
 
 //            frame1Login frame1 = new frame1Login();
