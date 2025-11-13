@@ -1,7 +1,5 @@
 package frames;
 import clases.class2Methods;
-import clases.contadorCodigoProducto;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class Frame2Programa extends javax.swing.JFrame {
@@ -203,65 +201,52 @@ public class Frame2Programa extends javax.swing.JFrame {
 
     //declaration of the object of the class2
     class2Methods createPerson;
+    int codigo = 0;
     
     private void crearCaja(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearCaja
         // TODO add your handling code here:
         //i take the variables from the Jframe
-        contadorCodigoProducto clase2;
-        clase2 = new contadorCodigoProducto();
         
-        
-        int codigow = 0;
-        clase2.añadirCodigo();
-        
+        //declaracion de variables
         String name = inputCrearNombre1.getText();
         int amount = Integer.parseInt(inputCrearCantidad1.getText());
         int price = Integer.parseInt(inputCrearPrecio1.getText());
-//        int codigo = (createPerson.getCodigo());
+        //Se le suma 1 al codigo para que sea diferente al anterior
+        codigo++;
         
-//        createPerson.añadirCodigo();
-        
-        createPerson = new class2Methods(name, amount, price/*, codigo*/);
-//        //put the variables to the constructor
-//        createPerson.setName(name);
-//        createPerson.setAmount(amount);
-//        createPerson.setPrice(price);
-//        
-//        createPerson.setCodigo(codigo);
+        //se instancia el objeto de la clase para enviar el objeto del producto
+        createPerson = new class2Methods(name, amount, price, codigo);
         
         //debbugging what was the variables in the object
         System.out.println("name: " + createPerson.getName());
         System.out.println("amount: " + createPerson.getAmount());
         System.out.println("price: " + createPerson.getPrice() + "$");
-//        System.out.println("codigo: " + codigo);
+        System.out.println("codigo: " + codigo);
 
-        
-        
-        
-        
-        
+
         //confirmation of the creation of the box
-        
-        
+
         
 //colocacion de cosas en la modeloTabla
-        
-
-//se crea el array de 4 valores que son los de la modeloTabla
+//se crea el array de 4 valores que son los de la tabla
         String datosTabla[] =  new String[4];
         
         //se toman los datos desde el metodo "createPerson" con los getters
         int codigo = 3;
-        datosTabla[0] = String.valueOf(codigo);
+        datosTabla[0] = String.valueOf(createPerson.getCodigo());
         datosTabla[1] = (createPerson.getName());
         datosTabla[2] = String.valueOf(createPerson.getPrice());
         datosTabla[3] = String.valueOf(createPerson.getAmount());
         
-        //se coloca en la modeloTabla
+        //se coloca en la tabla
         modeloTabla.addRow(datosTabla);
         
     }//GEN-LAST:event_crearCaja
 
+    
+    
+    
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

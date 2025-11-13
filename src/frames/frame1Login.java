@@ -46,7 +46,7 @@ public class frame1Login extends javax.swing.JFrame {
         bg.setForeground(new java.awt.Color(255, 255, 255));
 
         imgCompania.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        imgCompania.setIcon(new javax.swing.ImageIcon(getClass().getResource("/how2metodos/proyect1/resources/logo generico 250x200.png"))); // NOI18N
+        imgCompania.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/logo generico 250x200.png"))); // NOI18N
 
         txtUsuario.setFont(new java.awt.Font("Gadugi", 1, 30)); // NOI18N
         txtUsuario.setText("Usuario");
@@ -146,10 +146,6 @@ public class frame1Login extends javax.swing.JFrame {
         System.out.println("login try was: " + selection);
         
         if (selection){
-
-//            frame1Login frame1 = new frame1Login();
-//            frame1.dispose();
-
             //hacer el frame actual (frame1) invisible
             this.setVisible(false);
             

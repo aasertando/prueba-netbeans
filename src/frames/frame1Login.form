@@ -107,7 +107,7 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/how2metodos/proyect1/resources/logo generico 250x200.png"/>
+              <Image iconType="3" name="/imagenes/logo generico 250x200.png"/>
             </Property>
           </Properties>
         </Component>
