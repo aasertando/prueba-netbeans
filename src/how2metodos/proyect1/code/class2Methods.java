@@ -49,6 +49,7 @@ public class class2Methods {
         //variable to return 
        boolean selection;
         
+       //aqui esto esta mal colocado, esto hay que hacerlo con el do while
        //condition for seleccion(not empty basicaly)
         if (!"".equals(this.name) && this.amount != 0 && this.price != 0){
             selection = true;
