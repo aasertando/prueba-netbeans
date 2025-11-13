@@ -142,6 +142,7 @@ public class frame1Login extends javax.swing.JFrame {
         String password = inputContrasena.getText();
         
         int num12 =12;
+        int num23 = 23;
         
         //se mandan  valores al constructor
         class1LoginTry clase = new class1LoginTry(user, password);
