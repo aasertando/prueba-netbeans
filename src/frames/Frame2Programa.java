@@ -1,4 +1,5 @@
 package frames;
+import clases.clase3EnviarDatosTabla;
 import clases.class2Methods;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -35,8 +36,6 @@ public class Frame2Programa extends javax.swing.JFrame {
         txtCrearPrecio1 = new javax.swing.JLabel();
         inputCrearPrecio1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        bgBuscar = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         bgTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTabla1 = new javax.swing.JTable();
@@ -73,31 +72,30 @@ public class Frame2Programa extends javax.swing.JFrame {
         bgCrearLayout.setHorizontalGroup(
             bgCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bgCrearLayout.createSequentialGroup()
+                .addGap(56, 56, 56)
                 .addGroup(bgCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(bgCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(bgCrearLayout.createSequentialGroup()
+                            .addComponent(txtCrearNombre)
+                            .addGap(18, 18, 18)
+                            .addComponent(inputCrearNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(bgCrearLayout.createSequentialGroup()
+                            .addComponent(txtCrearCantidad1)
+                            .addGap(18, 18, 18)
+                            .addComponent(inputCrearCantidad1))
+                        .addGroup(bgCrearLayout.createSequentialGroup()
+                            .addComponent(txtCrearPrecio1)
+                            .addGap(18, 18, 18)
+                            .addComponent(inputCrearPrecio1, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(bgCrearLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addGroup(bgCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(bgCrearLayout.createSequentialGroup()
-                                .addComponent(txtCrearNombre)
-                                .addGap(18, 18, 18)
-                                .addComponent(inputCrearNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(bgCrearLayout.createSequentialGroup()
-                                .addComponent(txtCrearCantidad1)
-                                .addGap(18, 18, 18)
-                                .addComponent(inputCrearCantidad1))
-                            .addGroup(bgCrearLayout.createSequentialGroup()
-                                .addComponent(txtCrearPrecio1)
-                                .addGap(18, 18, 18)
-                                .addComponent(inputCrearPrecio1))))
-                    .addGroup(bgCrearLayout.createSequentialGroup()
-                        .addGap(199, 199, 199)
+                        .addGap(162, 162, 162)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
         bgCrearLayout.setVerticalGroup(
             bgCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(bgCrearLayout.createSequentialGroup()
-                .addGap(56, 56, 56)
+                .addGap(111, 111, 111)
                 .addGroup(bgCrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCrearNombre)
                     .addComponent(inputCrearNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -111,31 +109,10 @@ public class Frame2Programa extends javax.swing.JFrame {
                     .addComponent(inputCrearPrecio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addComponent(jButton1)
-                .addContainerGap(199, Short.MAX_VALUE))
+                .addContainerGap(144, Short.MAX_VALUE))
         );
 
         tabbed1.addTab("CrearCaja", bgCrear);
-
-        jLabel1.setText("Ingrese código");
-
-        javax.swing.GroupLayout bgBuscarLayout = new javax.swing.GroupLayout(bgBuscar);
-        bgBuscar.setLayout(bgBuscarLayout);
-        bgBuscarLayout.setHorizontalGroup(
-            bgBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bgBuscarLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel1)
-                .addContainerGap(428, Short.MAX_VALUE))
-        );
-        bgBuscarLayout.setVerticalGroup(
-            bgBuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(bgBuscarLayout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addComponent(jLabel1)
-                .addContainerGap(409, Short.MAX_VALUE))
-        );
-
-        tabbed1.addTab("BuscarCaja", bgBuscar);
 
         jTabla1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -155,6 +132,11 @@ public class Frame2Programa extends javax.swing.JFrame {
 
         btnActualizar.setFont(new java.awt.Font("Gadugi", 0, 14)); // NOI18N
         btnActualizar.setText("Actualizar");
+        btnActualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnActualizar(evt);
+            }
+        });
 
         javax.swing.GroupLayout bgTablaLayout = new javax.swing.GroupLayout(bgTabla);
         bgTabla.setLayout(bgTablaLayout);
@@ -176,11 +158,11 @@ public class Frame2Programa extends javax.swing.JFrame {
             .addGroup(bgTablaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(bgTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnActualizar)
                     .addComponent(btnEliminar))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         tabbed1.addTab("Tabla", bgTabla);
@@ -229,10 +211,10 @@ public class Frame2Programa extends javax.swing.JFrame {
         createPerson = new class2Methods(name, amount, price, codigo);
 
         //debbugging what was the variables in the object
-        System.out.println("name: " + createPerson.getName());
-        System.out.println("amount: " + createPerson.getAmount());
-        System.out.println("price: " + createPerson.getPrice() + "$");
-        System.out.println("codigo: " + codigo);
+//        System.out.println("name: " + createPerson.getName());
+//        System.out.println("amount: " + createPerson.getAmount());
+//        System.out.println("price: " + createPerson.getPrice() + "$");
+//        System.out.println("codigo: " + codigo);
 
         //confirmation of the creation of the box
 
@@ -241,7 +223,7 @@ public class Frame2Programa extends javax.swing.JFrame {
         String datosTabla[] =  new String[4];
 
         //se toman los datos desde el metodo "createPerson" con los getters
-        int codigo = 3;
+        
         datosTabla[0] = String.valueOf(createPerson.getCodigo());
         datosTabla[1] = (createPerson.getName());
         datosTabla[2] = String.valueOf(createPerson.getPrice());
@@ -255,8 +237,40 @@ public class Frame2Programa extends javax.swing.JFrame {
         inputCrearPrecio1.setText("");
 
         JOptionPane.showMessageDialog(rootPane, "Caja creada");
-
     }//GEN-LAST:event_crearCaja
+
+    private void btnActualizar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizar
+        // TODO add your handling code here:
+        int filaSeleccionada = jTabla1.getSelectedRow();
+        int totalColumnas = jTabla1.getColumnCount();
+        int totalFilas = jTabla1.getRowCount();
+        
+        //tiene que ser mayor que 0, esto es solo para verificar que hay algo seleccionado(pendiente hacerlo con do while)
+        if (filaSeleccionada >= 0){
+//            for (int i = 0; i >= totalColumnas; i++){
+                
+                int codigo = Integer.parseInt(jTabla1.getValueAt(filaSeleccionada,0).toString());
+                String nombre = jTabla1.getValueAt(filaSeleccionada,1).toString();
+                double precio = Double.parseDouble(jTabla1.getValueAt(filaSeleccionada,2).toString());
+                int cantidad = Integer.parseInt(jTabla1.getValueAt(filaSeleccionada,3).toString());
+                
+//                System.out.println("-----------");
+//                System.out.println("codigo " + codigo);
+//                System.out.println("nombre " + nombre);
+//                System.out.println("precio " + precio);
+//                System.out.println("cantidad " + cantidad);
+//                System.out.println("-----------");
+
+                clase3EnviarDatosTabla enviarDatos = new clase3EnviarDatosTabla(codigo, nombre, precio, cantidad);
+                
+                frame3PopupActualizar frameActualizar = new frame3PopupActualizar();
+                frameActualizar.setVisible(true);
+                
+//            }
+        }else{
+                JOptionPane.showMessageDialog(rootPane, "usted no ha seleccionado una fila");
+        }
+    }//GEN-LAST:event_btnActualizar
 
     //declaration of the object of the class2
     class2Methods createPerson;
@@ -301,7 +315,6 @@ public class Frame2Programa extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
-    private javax.swing.JPanel bgBuscar;
     private javax.swing.JPanel bgCrear;
     private javax.swing.JPanel bgTabla;
     private javax.swing.JButton btnActualizar;
@@ -310,7 +323,6 @@ public class Frame2Programa extends javax.swing.JFrame {
     private javax.swing.JTextField inputCrearNombre1;
     private javax.swing.JTextField inputCrearPrecio1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTabla1;
     private javax.swing.JTabbedPane tabbed1;
